@@ -103,10 +103,6 @@ def load_model(_):
 
 
 if __name__ == "__main__":
-    time.sleep(4)
-    #global current_scan_window
-    #global model
-
     load_model("")
 
     # init node

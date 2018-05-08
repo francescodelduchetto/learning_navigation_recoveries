@@ -1,0 +1,2 @@
+*if* FailureSituation_human 	      *during* goto *do* recordDemonstration; restart_action
+*if* FailureSituation_autodetected  *during* goto *do* executeRecovery; restart_action

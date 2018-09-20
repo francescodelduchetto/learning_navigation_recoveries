@@ -1,0 +1,25 @@
+init_cmd: |
+  source setup.sh
+windows:
+  - name: roscore
+    panes:
+      - roscore
+  - name: mongodb
+    panes:
+      - roslaunch mongodb_store mongodb_store.launch db_path:=$MONGO_FOLDER machine:=localhost
+  - name: simulation
+    panes:
+      - roslaunch strands_morse collection_morse.launch env:=$MAP_fast # NOTE remove `_fast` if you want the fully detailed simulation
+  - name: navigation
+    panes:
+      - roslaunch strands_movebase movebase.launch map:=$MAP
+  - name: create_topological_map
+    panes:
+      - roslaunch roslaunch topological_navigation topological_navigation_empty_map.launch map:=$TMAP
+      - rviz
+  - name: topological_navigation
+    panes:
+      - roslaunch roslaunch topological_navigation topological_navigation.launch map:=$TMAP
+  - name: plan
+    panes:
+      - roslaunch pnp_ros pnp_ros.launch

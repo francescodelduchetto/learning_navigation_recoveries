@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 import os
 import GPy
 import rospy
@@ -8,14 +10,12 @@ from std_msgs.msg import String
 from geometry_msgs.msg import Twist
 from std_msgs.msg import Float64MultiArray
 
-
 model_lock = threading.Lock()
 cmdVelPub = None
 running = False
 model = None
 meanX = None
 stdX = None
-
 
 
 def start_recovery_execution():

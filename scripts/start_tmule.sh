@@ -3,4 +3,4 @@ export TMULE_CONFIG=$1
 
 cd $TMULE_CONFIG
 
-tmule --config rob_lindsey.yaml server
+tmule --config launch.yaml server

@@ -4,8 +4,8 @@
  <arg name="TMULE_CONFIG" value="$(optenv TMULE_CONFIG /home/francesco/workspaces/test_workspace/src/learning_local_recovery_navigation/config)" />
 
   <node
-    name="lindimp_tmule_server"
-    pkg="lindimp_bringup"
+    name="llrn_tmule_server"
+    pkg="llrn"
     type="$(arg script)"
     args="$(arg TMULE_CONFIG)"
     output="screen">

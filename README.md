@@ -13,6 +13,8 @@ Edit the `scripts/setup.sh` file to put the path to your catkin workspace.
 
 Copy pnp_ros, pnp_msgs, and learning_local_recovery_navigation into the `src/` folder of your catkin workspace, then (when inside your workspace folder) build everything with `catkin_make`.
 
+Create the empty directory `~/mongodb/test`, or in you preferred place but change accordingly `MONGO_FOLDER` in `scripts/setup.sh`.
+
 ## Executing
 
 `roslaunch llrn launch_tmule.launch`

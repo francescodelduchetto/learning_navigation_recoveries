@@ -1,17 +1,29 @@
 # learning_local_recovery_navigation
 Source code of the Learning-by-Demonstration framework illustrated in "Don't Make the Same Mistakes Again and Again: Learning Local Recovery Policies for Navigation from Human Demonstrations"
 
-The code is based on ROS kinetic and it runs the experiments using the MORSE simulator.
+The code is based on **ROS kinetic** and it runs the experiments using the MORSE simulator.
 
 ## Installation
-Install ros-kinetic, mongodb, topological navigation, stramds_morse, strands_movebase, tmule, GPy, PetriNetPlans *branch* and how to install,  
+1. Install TMuLE: `pip install tmule`.
+
+2. Install GPy: `pip install GPy`.
+
+3. Install the STRANDS repository (quick setup in https://strands.readthedocs.io/en/latest/quick_setup.html). In particular you will need the following packages `strands_desktop`, `strands_movebase`, `strands_morse`, `topological_navigation`, `mongodb_store`.
+
+4. Clone the Petri Net plans repository (costmap branch) from https://github.com/francescodelduchetto/PetriNetPlans/tree/costmap.
+
+5. Clone this repository.
+
+7. Create a catkin_workspace (http://wiki.ros.org/catkin/Tutorials/create_a_workspace)
+
+6. Link `PetriNetPlans/PNPros/ROS_bridge/pnp_ros/pnp_ros`, `PetriNetPlans/PNPros/ROS_bridge/pnp_ros/pnp_msgs`, and `learning_local_recovery_navigation` into the `src/` folder of your catkin workspace, then (when inside your workspace folder) build everything with `catkin_make`.
 
 ## Configuration
 Edit the file `launch/launch_tmule.launch` to put the absolute path to the `config` folder for the `TMULE_CONFIG` argument.
 
 Edit the `scripts/setup.sh` file to put the path to your catkin workspace.
 
-Copy pnp_ros, pnp_msgs, and learning_local_recovery_navigation into the `src/` folder of your catkin workspace, then (when inside your workspace folder) build everything with `catkin_make`.
+
 
 Create the empty directory `~/mongodb/test`, or in you preferred place but change accordingly `MONGO_FOLDER` in `scripts/setup.sh`.
 

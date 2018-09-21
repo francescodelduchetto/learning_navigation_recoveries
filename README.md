@@ -1,4 +1,4 @@
-# learning_local_recovery_navigation
+# Learning Local Recoveries for Navigation from Human Demonstrations
 Source code of the Learning-by-Demonstration framework illustrated in 
 
 *Del Duchetto, F., Kucukyilmaz, A., Iocchi, L., & Hanheide, M. (2018). Do Not Make the Same Mistakes Again and Again: Learning Local Recovery Policies for Navigation From Human Demonstrations. IEEE Robotics and Automation Letters, 3(4), 4084-4091.*

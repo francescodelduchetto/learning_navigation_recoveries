@@ -3,7 +3,7 @@ Source code of the Learning-by-Demonstration framework illustrated in
 
 *Del Duchetto, F., Kucukyilmaz, A., Iocchi, L., & Hanheide, M. (2018). Do Not Make the Same Mistakes Again and Again: Learning Local Recovery Policies for Navigation From Human Demonstrations. IEEE Robotics and Automation Letters, 3(4), 4084-4091.*
 
-The code is based on **ROS kinetic** and it runs the experiments using the MORSE simulator.
+The code is based on ROS kinetic and it runs the experiments using the MORSE simulator.
 
 ## Installation
 1. Install TMuLE: `pip install tmule`.

@@ -19,23 +19,21 @@ The code is based on **ROS kinetic** and it runs the experiments using the MORSE
 6. Link `PetriNetPlans/PNPros/ROS_bridge/pnp_ros/pnp_ros`, `PetriNetPlans/PNPros/ROS_bridge/pnp_ros/pnp_msgs`, and `learning_local_recovery_navigation` into the `src/` folder of your catkin workspace, then (when inside your workspace folder) build everything with `catkin_make`.
 
 ## Configuration
-Edit the file `launch/launch_tmule.launch` to put the absolute path to the `config` folder for the `TMULE_CONFIG` argument.
+- Edit the file `launch/launch_tmule.launch` to put the absolute path to the `config` folder for the `TMULE_CONFIG` argument.
 
-Edit the `scripts/setup.sh` file to put the path to your catkin workspace.
+- Edit the `scripts/setup.sh` file to put the path to your catkin workspace.
 
-
-
-Create the empty directory `~/mongodb/test`, or in you preferred place but change accordingly `MONGO_FOLDER` in `scripts/setup.sh`.
+- Create the empty directory `~/mongodb/test`, or in you preferred place but change accordingly `MONGO_FOLDER` in `scripts/setup.sh`.
 
 ## Executing
 
-`roslaunch llrn launch_tmule.launch`
+1. `roslaunch llrn launch_tmule.launch`
 
-Then open `0.0.0.0:9999` in a browser.
+2. Open `0.0.0.0:9999` in a browser.
 
-Launch all the windows up to `create_topological_map`, then create a topological map as explained in [link](link).
+3. Launch all the windows up to the one named `create_topological_map`, then create a topological map as explained in [link](link).
 
-Stop the window `create_topological_map` and start all the remaining.
+4. Stop the window `create_topological_map` and start all the remaining.
 
 Now you can execute a navigation plan (one of those in `pnp_ros/plans`, or you can write your own and generate it by `pnpgen_linear YOUR_PLAN_NAME.plan YOUR_EXECUTION_RULES.er`) by publishing on the topic `/planToExec`, e.g. `rostopic pub /planToExec std_msgs/String "data: 'passdoor12'"`.
 
